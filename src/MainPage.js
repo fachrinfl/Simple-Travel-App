@@ -25,10 +25,10 @@ class MainPage extends Component {
                 <View style={{ flex: 3 }}>
                     <Banner />
                 </View>
-                <View style={{ flex: 2 }}>
+                <View style={{ flex: 2.5 }}>
                     <Destionations />
                 </View>
-                <View style={{ flex: 4 }}>
+                <View style={{ flex: 3.5 }}>
                     <Reviewers />
                 </View>
             </View>

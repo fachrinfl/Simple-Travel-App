@@ -14,9 +14,7 @@ const styles = StyleSheet.create({
     slide: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
-        paddingLeft: 10,
-        paddingRight: 10
+        alignItems: 'center'
     },
     text: { color: '#fff', fontSize: 30, fontWeight: 'bold' }
 })
@@ -39,8 +37,7 @@ class Banner extends Component {
                         <Image
                             style={{
                                 width: '100%',
-                                height: '100%',
-                                borderRadius: 5
+                                height: '100%'
                             }}
                             source={{ uri: data.image }}
                         />

@@ -5,11 +5,13 @@ import { robotoWeights } from 'react-native-typography'
 class Reviewers extends Component {
     render() {
         return (
-            <View style={{ padding: 10 }}>
+            <View style={{ marginTop: 10 }}>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={{
                         ...robotoWeights.light,
-                        color: '#000000'
+                        color: '#000000',
+                        margin: 10,
+                        fontSize: 18
                     }}>Top Reviewers</Text>
                 </View>
             </View>
