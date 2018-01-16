@@ -43,3 +43,24 @@ const DestinationsList = () => {
             return err
         })
 }
+
+export const  FETCH_REVIEWERS = 'FETCH_REVIEWERS'
+export const fetchReviewers = () => {
+    return {
+        type: FETCH_REVIEWERS,
+        payload: ReviewersList()
+    }
+}
+
+const ReviewersList = () => {
+    const url_destinations = `${BASE_API_URL}/reviewer_lists`
+    return axios.get(url_destinations)
+        .then(res => {
+            console.log(res)
+            return res
+        })
+        .catch(err => {
+            console.log(err)
+            return err
+        })
+}

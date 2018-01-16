@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { PENDING, FULFILLED, REJECTED } from 'redux-promise-middleware'
 import { 
-  FETCH_BANNER, FETCH_DESTINATIONS
+  FETCH_BANNER, FETCH_DESTINATIONS, FETCH_REVIEWERS
 } from '../actions/index'
 
 export const banners = (state = {
@@ -60,9 +60,37 @@ export const destinations = (state = {
     }
 }
 
+export const reviewers = (state = {
+    isFetching: false,
+    items: []
+}, action) => {
+    switch (action.type){
+
+        case `${FETCH_REVIEWERS}_PENDING`:
+            return {
+                ...state,
+            }
+
+        case `${FETCH_REVIEWERS}_FULFILLED`:
+            console.log(action.payload)
+            return {
+                ...state,
+                items: action.payload.data
+            }
+
+        case `${FETCH_REVIEWERS}_REJECTED`:
+            return {
+                ...state,
+            }
+
+        default:
+            return state
+    }
+}
+
 
 const rootReducer = combineReducers({
-  banners, destinations
+  banners, destinations, reviewers
 })
 
 export default rootReducer

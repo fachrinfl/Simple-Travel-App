@@ -3,7 +3,8 @@ import {
     StyleSheet,
     ActivityIndicator,
     Text,
-    View
+    View,
+    ScrollView
 } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchData } from './actions'
@@ -16,7 +17,11 @@ class MainPage extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1 }}>
+            <View
+                style={{
+                    flex: 1
+                }}
+            >
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={{
                         ...robotoWeights.bold, fontSize: 24, color: '#000000'
@@ -25,11 +30,15 @@ class MainPage extends Component {
                 <View style={{ flex: 3 }}>
                     <Banner />
                 </View>
-                <View style={{ flex: 2.5 }}>
-                    <Destionations />
-                </View>
-                <View style={{ flex: 3.5 }}>
-                    <Reviewers />
+                <View style={{ flex: 6 }}>
+                    <ScrollView showsVerticalScrollIndicator={false}>
+                        <View style={{ flex: 2.5 }}>
+                            <Destionations />
+                        </View>
+                        <View style={{ flex: 3.5 }}>
+                            <Reviewers />
+                        </View>
+                    </ScrollView>
                 </View>
             </View>
         )

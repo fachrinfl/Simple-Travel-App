@@ -4,42 +4,7 @@ import { robotoWeights } from 'react-native-typography'
 import { connect } from 'react-redux'
 import { fetchDestinations } from '../actions'
 
-const img = 'https://blog.homeaway.co.id/wp-content/uploads/sites/4/2017/02/Sakura-di-Taiwan-Taichung-1.jpg'
-
 class Destionations extends Component {
-
-    state = {
-        data_img: [
-            {
-                gambar: img,
-                name: 'sakura'
-            },
-            {
-                gambar: img,
-                name: 'sakura'
-            },
-            {
-                gambar: img,
-                name: 'sakura'
-            },
-            {
-                gambar: img,
-                name: 'sakura'
-            },
-            {
-                gambar: img,
-                name: 'sakura'
-            },
-            {
-                gambar: img,
-                name: 'sakura'
-            },
-            {
-                gambar: img,
-                name: 'sakura'
-            }
-        ]
-    }
 
     componentDidMount(){
         this.props.dispatch(fetchDestinations())
